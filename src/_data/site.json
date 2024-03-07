@@ -2,12 +2,9 @@
   "authorEmail": "hello@conedevelopment.com",
   "authorName": "Cone",
   "copyright": "Some rights reserved.",
-  "name": "Spruce CSS Eleventy Documentation Template",
-  "slogen": "An Eleventy theme for documentation sites",
+  "name": "WebFlowConecta",
+  "slogen": "WebFlowConecta (WFC) is a digital company offering Software as a Service (SaaS), with the primary goal of assisting your business in effectively managing its marketing efforts for your product. ",
   "social": {
-    "twitter": "https://twitter.com/conedevelopment",
-    "github": "https://github.com/conedevelopment/sprucecss-eleventy-documentation-template",
-    "discord": ""
-  },
-  "url": "https://eleventy-documentation.sprucecss.com"
+    "github": "https://github.com/WFC-WebFlowConecta/documentation-layout-webflow.git"
+  }
 }

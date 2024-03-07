@@ -1,38 +1,16 @@
 ---
-title: "Document your next project a little bit better."
-headline: "Eleventy / Spruce CSS"
-btns:
--
-    caption: "Introduction"
-    url: "/getting-started/introduction/"
-    type: "regular"
--
-    caption: "Changelog"
-    url: "/changelog/"
-    type: "outline"
-summary: "Do you work on a project that requires a documentation? This theme is for you. It's a simple, clean and responsive theme for Eleventy."
+title: "Drives Marketing Success Through Innovative SaaS Solutions"
+headline: "Home"
+summary: "WebFlowConecta (WFC) is a digital company offering Software as a Service (SaaS), with the primary goal of assisting your business in effectively managing its marketing efforts for your product."
 displaySummary: true
 layout: "layouts/front-page.html"
-overview:
--
-    title: "Getting Started"
-    url: "/getting-started/"
-    description: "Start here and get to know this minimalistic Eleventy theme."
--
-    title: "Customization"
-    url: "/customization/"
-    description: "Built on the top of Spruce CSS, you can easily customize its look."
 faqs:
--
-    title: "Why Make Another CSS Framework?"
-    description: "As you may know, there are many CSS frameworks (hundreds of them, and a lot of them are not maintained today). Everybody can choose one that suits their work style or project requirements. So why make another one? It is certainly not because we can do it better but because we want to do it our way. We want to be in control and make decisions."
--
-    title: "It Is Opinionated"
-    description: "Each system is opinionated but on a different level; this is valid for Spruce too. We don’t want to vote for (strictly) any particular solution (because there is always more than one), but we will show you what we think is the best for us (and maybe for you too). We don’t believe there is a good or bad solution, but we can learn from any of them."
--
-    title: "We Left the Grid Out"
-    description: "One controversial decision we made with Spruce is to leave a classical grid system out. Because of the late CSS layout model developments like Flexbox and Grid, we think it can be eliminated; this doesn’t mean that we won’t show you how to make layouts with ease, but we try to make it the modern way."
--
-    title: "Coding Style Guide and Practices"
-    description: "Where it is possible, we use elements and/or attributes to style elements, but it is still a class-based framework."
+  - title: "What services does WebFlowConecta provide?"
+    description: "WFC offers a comprehensive set of digital services, primarily focusing on Software as a Service (SaaS) solutions to enhance and streamline your company's marketing management for your product.."
+  - title: "How can WFC benefit my business's marketing strategy?"
+    description: "WFC provides tools and features designed to optimize your marketing efforts, offering efficient solutions for campaign management, analytics, and overall strategy enhancement."
+  - title: "Is WebFlowConecta suitable for businesses of all sizes?"
+    description: "Yes, WFC is scalable and adaptable, making it suitable for businesses of varying sizes. Whether you're a startup or an established enterprise, our services can be tailored to meet your specific needs."
+  - title: "What makes WFC stand out in the digital marketing industry?"
+    description: "WFC distinguishes itself through its user-friendly interface, innovative features, and a commitment to staying abreast of industry trends. Our goal is to provide cutting-edge solutions that empower your business in the dynamic digital landscape."
 ---
