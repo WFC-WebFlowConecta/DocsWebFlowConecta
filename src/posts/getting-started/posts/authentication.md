@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 1
 ---
 
-Here, we will take care of the entire authentication process for our WFC project. This section is dedicated to managing user credentials and generating authentication token.
+Test, we will take care of the entire authentication process for our WFC project. This section is dedicated to managing user credentials and generating authentication token.
 
 ## Create Account
 
