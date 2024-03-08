@@ -20,4 +20,4 @@ jobs:
 
       - name: Install Dependencies and Build on Server
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} 'cd /caminho/do/seu/projeto && npm i && npm run prod'
+          ssh -i ${{ secrets.SFTP_SECRET_KEY }} ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }} 'cd /home/ubuntu/DocsWebFlowConecta && npm i && npm run prod'
