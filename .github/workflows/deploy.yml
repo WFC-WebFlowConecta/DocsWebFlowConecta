@@ -15,6 +15,6 @@ jobs:
         with:
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
-          remote_path: '/var/www/DocsWebFlowConecta'
+          remote_path: '/home/ubuntu/DocsWebFlowConecta'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
           sftp_only: true
