@@ -3,20 +3,18 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-
-  jobs:
-      deploy_job:
-      runs-on: ubuntu-latest
-      name: deploy
-      steps:
-          - name: Checkout
-          uses: actions/checkout@v2
-          - name: deploy file
-          uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-          with:
-              username: ${{ secrets.FTP_USERNAME }}
-              server: ${{ secrets.FTP_SERVER }}
-              remote_path: '/var/www/DocsWebFlowConecta'
-              ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
-              sftp_only: true 
-
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          remote_path: '/var/www/DocsWebFlowConecta'
+          ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
+          sftp_only: true
