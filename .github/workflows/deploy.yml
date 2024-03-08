@@ -9,12 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Dependencies
-        run: npm i
-      - name: Build
-        run: npm run prod
-        
-      - name: deploy file
+      - name: Deploy Files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           username: ${{ secrets.FTP_USERNAME }}
@@ -22,3 +17,7 @@ jobs:
           remote_path: '/home/ubuntu/DocsWebFlowConecta'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
           sftp_only: true
+
+      - name: Install Dependencies and Build on Server
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} 'cd /caminho/do/seu/projeto && npm i && npm run prod'
