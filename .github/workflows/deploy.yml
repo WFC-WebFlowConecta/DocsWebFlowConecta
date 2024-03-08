@@ -20,5 +20,5 @@ jobs:
 
       - name: Install Dependencies and Build on Server
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
+          echo "${{ secrets.SFTP_SECRET_KEY }}" > key.pem
           ssh -i  'key.pem' ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }} 'cd /home/ubuntu/DocsWebFlowConecta && npm i && npm run prod'
