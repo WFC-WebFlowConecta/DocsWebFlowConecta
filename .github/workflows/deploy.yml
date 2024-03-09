@@ -14,7 +14,7 @@ jobs:
         with:
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
-          remote_path: '/home/ubuntu/DocsWebFlowConecta'
+          remote_path: '/usr/share/nginx/html/public/DocsWebFlowConecta/dist'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
           sftp_only: true
           
@@ -25,4 +25,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           key: ${{ secrets.SFTP_SECRET_KEY }}
           port: ${{ secrets.FTP_PORT }}
-          script: cd /home/ubuntu/DocsWebFlowConecta && npm i && npm run prod
+          script: | 
+            cd /usr/share/nginx/html/public/DocsWebFlowConecta
+            sudo npm i
+            sudo npm run prod
