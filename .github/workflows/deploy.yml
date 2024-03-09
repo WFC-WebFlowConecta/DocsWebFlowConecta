@@ -17,8 +17,12 @@ jobs:
           remote_path: '/home/ubuntu/DocsWebFlowConecta'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
           sftp_only: true
-
-      - name: Install Dependencies and Build on Server
-        run: |
-          echo "${{ secrets.SFTP_SECRET_KEY }}" > key.pem
-          ssh -i  'key.pem' ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }} 'cd /home/ubuntu/DocsWebFlowConecta && npm i && npm run prod'
+          
+      - name: Install dependencies and build the project
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.SFTP_SECRET_KEY }}
+          port: ${{ secrets.FTP_PORT }}
+          script: cd /home/ubuntu/DocsWebFlowConecta && npm i && npm run prod
