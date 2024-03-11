@@ -19,26 +19,7 @@ To create an account, simply send a request to the following route, with the fol
 https://wfc.digital/auth/createAccount
 ```
 
-<!-- ## header
-
-<div class="table-responsive">
-  <table class="table table--striped table--hover">
-    <thead>
-      <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>authorization</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    </tbody>
-  </table>
-</div> -->
+<br>
 
 - **Body:**
 
@@ -76,6 +57,8 @@ https://wfc.digital/auth/createAccount
   </table>
 </div>
 
+<br>
+
 - **Possible returns:**
 
 ```json
@@ -108,6 +91,8 @@ https://wfc.digital/auth/createAccount
 }
 ```
 
+<br>
+
 ## Login Account
 
 Upon successful login, you will be issued a credential, specifically an authorization token, delivered directly within the response of your request. Utilize these credentials when accessing routes that mandate authentication by including the token in the route header, formatted as follows: `authorization: Bearer <token>
@@ -118,6 +103,8 @@ Upon successful login, you will be issued a credential, specifically an authoriz
 
 https://wfc.digital/auth/loginAccount
 ```
+
+<br>
 
 - **Body:**
 
@@ -144,6 +131,8 @@ https://wfc.digital/auth/loginAccount
     </tbody>
   </table>
 </div>
+
+<br>
 
 - **Possible returns:**
 
