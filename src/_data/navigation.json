@@ -23,6 +23,16 @@
       ]
     },
     {
+      "title": "Webhook",
+      "items": [
+        {
+          "caption": "Events",
+          "url": "/webhook/events/",
+          "external": false
+        }
+      ]
+    },
+    {
       "title": "Spruce CSS",
       "items": [
         {
