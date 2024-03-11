@@ -29,6 +29,16 @@
           "caption": "Events",
           "url": "/webhook/events/",
           "external": false
+        },
+        {
+          "caption": "List Events",
+          "url": "/webhook/list-events/",
+          "external": false
+        },
+        {
+          "caption": "Create Hook",
+          "url": "/webhook/create-hook/",
+          "external": false
         }
       ]
     },

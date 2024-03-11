@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 1
 ---
 
-## Creating custom events
+## Creating Custom Events
 
 To leverage our webhook module, you have the option to utilize the events we've pre-defined or craft your own. This guide will walk you through the process of creating custom events, providing you with the flexibility to tailor the functionality according to your specific needs.
 
