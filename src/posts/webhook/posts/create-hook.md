@@ -12,7 +12,7 @@ Creating hooks is essential for utilizing webhooks with event semantics. To init
 ```bash
 # METHOD - POST
 
-https://wfc.digital/webhook/createCustomEvent
+https://api.wfc.digital/webhook/createCustomEvent
 ```
 
 <br>
@@ -37,6 +37,10 @@ https://wfc.digital/webhook/createCustomEvent
     </tbody>
   </table>
 </div>
+
+<br>
+
+- **Body:**
 
 <div class="table-responsive">
   <table class="table table--striped table--hover">

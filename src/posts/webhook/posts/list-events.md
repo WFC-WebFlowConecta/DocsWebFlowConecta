@@ -12,7 +12,7 @@ To create custom events, you must send the `eventId`. Use this route together wi
 ```bash
 # METHOD - GET
 
-https://wfc.digital/webhook/listEvents?authorization=<your_token_here>
+https://api.wfc.digital/webhook/listEvents?authorization=<your_token_here>
 ```
 
 <br>
