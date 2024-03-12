@@ -184,3 +184,103 @@ The Access Hook does not adhere to a standardized return format. Since it operat
 ## Data processing in access hook
 
 The handling of key values within the payload remains unaltered, allowing for enhanced flexibility for users implementing our webhook module. This means that any characteristics, such as white `spaces within` a value or `special characters`, are transmitted to the redirect link exactly as they are in their raw form.
+
+## Listing of accesses in a specific hook
+
+When a request is directed to a hook you've established, not only does it seamlessly forward the transmitted data to the designated redirect link, but it also ensures the retention of this data in our database for your convenient reference.
+
+To view the data, you simply need to have the `hookId` and the authentication token. If you don't have any `hookId`, you can see the complete list of all hooks in your account in the "List of all user hooks" section:
+
+```bash
+# METHOD - GET
+
+https://api.wfc.digital/webhook/listAccessHook/:hookId?authorization=<your_authorization_token>
+```
+
+- **Params:**
+
+<div class="table-responsive">
+  <table class="table table--striped table--hover">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>hookId</td>
+      <td>string</td>
+      <td>Hook id you want to see the data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+- **QueryParams:**
+
+<div class="table-responsive">
+  <table class="table table--striped table--hover">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>authorization</td>
+      <td>string</td>
+      <td>Authorization token generated at user login (expired every two hours)</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+- **Possible returns:**
+
+```json
+{
+  "default": {
+    "statusCode": 200,
+    "statusText": "these are the accesses of this hook",
+    "statusType": "success"
+  },
+  "custom": {
+    "accessOfHook": [
+      {
+        "id": "<id_access_hook>",
+        "hookId": "<id_hook>",
+        "payload": {
+          "fild1": "<these filds are created when the hook is created>",
+          "fild2": "<these filds are created when the hook is created>",
+          "fild3": "<these filds are created when the hook is created>"
+        },
+        "createdAt": "<date_this_acess_created>"
+      }
+    ]
+  }
+}
+```
+
+```json
+{
+  "default": {
+    "statusCode": 400,
+    "statusText": "error",
+    "statusType": "this hook does not exist or does not belong to this user"
+  }
+}
+```
+
+```json
+{
+  "default": {
+    "statusCode": 400,
+    "statusText": "this hook does not yet have access",
+    "statusType": "error"
+  }
+}
+```
