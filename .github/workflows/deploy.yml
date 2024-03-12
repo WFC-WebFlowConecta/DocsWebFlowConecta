@@ -27,5 +27,6 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           script: | 
             cd /usr/share/nginx/html/public/DocsWebFlowConecta
+            sudo npm run delete:dist
             sudo npm i
             sudo npm run prod
