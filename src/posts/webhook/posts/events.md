@@ -1,6 +1,6 @@
 ---
 title: "Events"
-summary: "The webhook module gives you the option to use predefined events or create custom events. This guide allows you to create your personalized events in a clear and flexible way, adapting them to the specific format of your system."
+summary: "Events are the semantic way to separate hooks."
 eleventyNavigation:
   key: Events
   parent: Webhook
@@ -18,8 +18,6 @@ To initiate the creation process, effortlessly submit a request to the provided 
 
 https://api.wfc.digital/webhook/createCustomEvent
 ```
-
-<br>
 
 - **Headers:**
 
@@ -41,8 +39,6 @@ https://api.wfc.digital/webhook/createCustomEvent
     </tbody>
   </table>
 </div>
-
-<br>
 
 - **Body:**
 
@@ -69,8 +65,6 @@ https://api.wfc.digital/webhook/createCustomEvent
     </tbody>
   </table>
 </div>
-
-<br>
 
 - **Possible returns:**
 
@@ -99,6 +93,60 @@ https://api.wfc.digital/webhook/createCustomEvent
     "statusCode": 400,
     "statusText": "this name exist in other custom event",
     "statusType": "error"
+  }
+}
+```
+
+## List Events
+
+To create custom events, you must send the `eventId`. Use this route together with your authentication token to access all events available in your account.
+
+```bash
+# METHOD - GET
+
+https://api.wfc.digital/webhook/listEvents?authorization=<your_token_here>
+```
+
+- **QueryParams:**
+
+<div class="table-responsive">
+  <table class="table table--striped table--hover">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>authorization</td>
+      <td>string</td>
+      <td>Authorization token generated at user login (expired every two hours)</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+- **Possible returns:**
+
+```json
+{
+  "default": {
+    "statusCode": 200,
+    "statusText": "showing all events available to you",
+    "statusType": "success"
+  },
+  "custom": {
+    "availableEvents": [
+      {
+        "id": "<id_event>",
+        "name": "<name_event>",
+        "description": "<description_event>",
+        "status": "<status_event>",
+        "createdAt": "<created_at_date_event>"
+      }
+    ]
   }
 }
 ```
