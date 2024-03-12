@@ -31,18 +31,8 @@
           "external": false
         },
         {
-          "caption": "List Events",
-          "url": "/webhook/list-events/",
-          "external": false
-        },
-        {
-          "caption": "Create Hook",
-          "url": "/webhook/create-hook/",
-          "external": false
-        },
-        {
-          "caption": "Access Hook",
-          "url": "/webhook/access-hook/",
+          "caption": "Hooks",
+          "url": "/webhook/hooks/",
           "external": false
         }
       ]
