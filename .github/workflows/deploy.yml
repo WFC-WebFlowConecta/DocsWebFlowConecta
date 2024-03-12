@@ -16,6 +16,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           remote_path: '/usr/share/nginx/html/public/DocsWebFlowConecta'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
+          delete_remote_files: true
           sftp_only: true
           
       - name: Install dependencies and build the project
@@ -27,6 +28,5 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           script: | 
             cd /usr/share/nginx/html/public/DocsWebFlowConecta
-            sudo npm run delete:dist
             sudo npm i
             sudo npm run prod
