@@ -16,7 +16,7 @@ To initiate the creation process, effortlessly submit a request to the provided 
 ```bash
 # METHOD - POST
 
-https://wfc.digital/webhook/createCustomEvent
+https://api.wfc.digital/webhook/createCustomEvent
 ```
 
 <br>

@@ -16,7 +16,7 @@ To create an account, simply send a request to the following route, with the fol
 ```bash
 # METHOD - POST
 
-https://wfc.digital/auth/createAccount
+https://api.wfc.digital/auth/createAccount
 ```
 
 <br>
@@ -101,7 +101,7 @@ Upon successful login, you will be issued a credential, specifically an authoriz
 ```bash
 # METHOD - POST
 
-https://wfc.digital/auth/loginAccount
+https://api.wfc.digital/auth/loginAccount
 ```
 
 <br>
