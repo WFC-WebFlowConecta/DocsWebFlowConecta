@@ -9,6 +9,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Remove the src directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.SFTP_SECRET_KEY }}
+          port: ${{ secrets.FTP_PORT }}
+          script: | 
+            cd /usr/share/nginx/html/public/DocsWebFlowConecta
+            sudo rm -rf src
+
       - name: Deploy Files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
