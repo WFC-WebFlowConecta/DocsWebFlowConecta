@@ -284,3 +284,64 @@ https://api.wfc.digital/webhook/listAccessHook/:hookId?authorization=<your_autho
   }
 }
 ```
+
+## List of all user hooks
+
+Here you will learn how to view the hooks registered in your account
+
+Just send a request to that url, passing your credential as query params. This will return all your hooks, without pagination:
+
+```bash
+# METHOD - GET
+
+https://api.wfc.digital/webhook/listAllHooksUser?authorization=<your_authorization_token>
+```
+
+- **QueryParams:**
+
+<div class="table-responsive">
+  <table class="table table--striped table--hover">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>authorization</td>
+      <td>string</td>
+      <td>Authorization token generated at user login (expired every two hours)</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+- **Possible returns:**
+
+```json
+{
+  "default": {
+    "statusCode": 200,
+    "statusText": "these are your hooks",
+    "statusType": "success"
+  },
+  "custom": {
+    "hooks": [
+      {
+        "id": "<hook_id>",
+        "userId": "<user_id>",
+        "nameHook": "<hook_name>",
+        "eventId": "<event_id | null>",
+        "customEventId": "<custom_event_id | null>",
+        "redirect": "<link_redirect>",
+        "typeRequest": "<get | post>",
+        "filds": "<request_fields_separated_by_semicolon>",
+        "status": "<hook_active_or_no>",
+        "createdAt": "<created_at_hook>"
+      }
+    ]
+  }
+}
+```
