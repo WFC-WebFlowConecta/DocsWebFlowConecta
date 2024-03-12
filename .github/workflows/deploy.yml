@@ -16,8 +16,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           remote_path: '/usr/share/nginx/html/public/DocsWebFlowConecta'
           ssh_private_key: ${{ secrets.SFTP_SECRET_KEY }}
-          delete_remote_files: true
-          sftp_only: false
+          sftp_only: true
           
       - name: Install dependencies and build the project
         uses: appleboy/ssh-action@v1.0.3
