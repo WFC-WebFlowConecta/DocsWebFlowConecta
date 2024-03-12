@@ -39,6 +39,11 @@
           "caption": "Create Hook",
           "url": "/webhook/create-hook/",
           "external": false
+        },
+        {
+          "caption": "Access Hook",
+          "url": "/webhook/access-hook/",
+          "external": false
         }
       ]
     },
