@@ -7,6 +7,8 @@ eleventyNavigation:
   order: 1
 ---
 
+Events serve as a semantic tool for distinguishing between different types of occurrences. For instance, consider two events focused on handling abandoned shopping carts. While they may bear distinct names, they are essentially addressing the same event, establishing a semantic linkage between them.
+
 ## Creating Custom Events
 
 To leverage our webhook module, you have the option to utilize the events we've pre-defined or craft your own. This guide will walk you through the process of creating custom events, providing you with the flexibility to tailor the functionality according to your specific needs.
@@ -99,7 +101,7 @@ https://api.wfc.digital/webhook/createCustomEvent
 
 ## List Events
 
-To create custom events, you must send the `eventId`. Use this route together with your authentication token to access all events available in your account.
+To create your `hooks`, you need to reference the `event ID` that the hook will utilize. Access this route to view all your `events`.
 
 ```bash
 # METHOD - GET
