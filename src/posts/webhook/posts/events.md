@@ -140,15 +140,28 @@ https://api.wfc.digital/webhook/listEvents?authorization=<your_token_here>
     "statusType": "success"
   },
   "custom": {
-    "availableEvents": [
-      {
-        "id": "<id_event>",
-        "name": "<name_event>",
-        "description": "<description_event>",
-        "status": "<status_event>",
-        "createdAt": "<created_at_date_event>"
-      }
-    ]
+    "defaultEvents": {
+      "availableEvents": [
+        {
+          "id": "<id_event>",
+          "name": "<name_event>",
+          "description": "<description_event>",
+          "status": "<status_event>",
+          "createdAt": "<created_at_date_event>"
+        }
+      ]
+    },
+    "customEvents": {
+      "availableEvents": [
+        {
+          "id": "<id_event>",
+          "name": "<name_event>",
+          "description": "<description_event>",
+          "status": "<status_event>",
+          "createdAt": "<created_at_date_event>"
+        }
+      ]
+    }
   }
 }
 ```
